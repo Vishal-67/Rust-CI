@@ -16,9 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Change Directory
-      run: cd rust-template && ls && pwd
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --manifest-path /home/runner/work/Rust-CI/Rust-CI/rust-template --verbose
     - name: Run tests
       run: cargo test --verbose
